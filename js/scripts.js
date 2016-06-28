@@ -21,11 +21,8 @@ $(document).ready(function () {
     event.preventDefault();
     var userInput = parseInt($("input#number").val());
     var result = pingPong(userInput);
+   $("#output").append("<li>"+ result + "</li>");
 
-    $("#output").show(".list").append("<li>"+ "pingpong"+"</li>");
-    $("#output").show(".list").append("<li>"+ "ping"+"</li>");
-    $("#output").show(".list").append("<li>"+ "pong"+"</li>");
-    $("#output").show(".list").append("<li>"+ index+"</li>");
 
   });
 });
