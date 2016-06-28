@@ -1,15 +1,16 @@
 //Back-End//
 var pingPong = function(number) {
   var result;
+  var index;
   for (var index = 1; index <= number; index += 1) {
     if (index % 15 === 0) {
-         result= "pingpong";
+    result = "pingpong";
     } else if (index % 3 === 0) {
-         result= "ping";
+    result = "ping";
     } else if (index % 5 === 0) {
-         result= "pong";
+    result = "pong";
     } else {
-         result= "index";
+    result = index;
     }
     return result;
   }
@@ -18,18 +19,13 @@ var pingPong = function(number) {
 $(document).ready(function () {
   $("#blanks form").submit(function(event) {
     event.preventDefault();
-    var userInput= parseInt($("input#number").val());
-    var inputs=pingPong(userInput);
-    var index=[];
-    // pingPong(inputs);
-    // $(".list").append("<li>" + "pingpong" + "</li>");
-    // $(".list").append("<li>" + "ping" + "</li>");
-    // $(".list").append("<li>" + "pong" + "</li>");
-    // $(".list").append("<li>" + index + "</li>");
-    $("#output").show("<li>" + "pingpong" + "</li>");
-    $("#output").show("<li>" + "ping" + "</li>");
-    $("#output").show("<li>" + "pong" + "</li>");
-    $("#output").show("<li>" + index + "</li>");
+    var userInput = parseInt($("input#number").val());
+    var result = pingPong(userInput);
+
+    $("#output").show(".list").append("<li>"+ "pingpong"+"</li>");
+    $("#output").show(".list").append("<li>"+ "ping"+"</li>");
+    $("#output").show(".list").append("<li>"+ "pong"+"</li>");
+    $("#output").show(".list").append("<li>"+ index+"</li>");
 
   });
 });
