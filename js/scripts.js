@@ -21,9 +21,8 @@ $(document).ready(function () {
   $("#blanks form").submit(function(event) {
     event.preventDefault();
     // var userInput = parseInt($("input#number").val());
-    var userInput = [];
-    userInput.push = parseInt($("input#number").val());
-    var result = pingPong(userInput);
+    var number = parseInt($("input#number").val());
+    var result = pingPong(number);
    $("#output").append("<li>"+ result + "</li>");
   });
 });
