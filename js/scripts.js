@@ -2,7 +2,6 @@
 var pingPong = function(number) {
   var result=[];
   var index;
-  var x=[];
   for (var index = 1; index <= number; index += 1) {
     if (index % 15 === 0) {
     result.push("pingpong");
@@ -30,7 +29,7 @@ $(document).ready(function () {
           alert("Please enter a number")
       };
       result.forEach(function(index) {
-        $(".uncover").append("<li>" + index + "</li>");
+      $(".uncover").append("<li>" + index + "</li>");
       });
       $("#output").show();
 
